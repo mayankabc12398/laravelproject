@@ -10,3 +10,4 @@ php artisan cache:clear || true
 
 php-fpm -D
 nginx -g "daemon off;"
+rm -f /var/www/html/bootstrap/cache/*.php || true
