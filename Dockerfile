@@ -16,6 +16,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN chmod +x /var/www/html/start.sh
 
-RUN php artisan config:cache && php artisan route:cache && php artisan view:cache
+# ❌ DO NOT cache config at build time on Render
+# RUN php artisan config:cache && php artisan route:cache && php artisan view:cache
 
 CMD ["bash", "start.sh"]
