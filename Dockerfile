@@ -12,7 +12,7 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
-COPY nginx.conf /etc/nginx/sites-available/default
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN chmod +x /var/www/html/start.sh
 
